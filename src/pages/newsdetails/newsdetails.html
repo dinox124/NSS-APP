@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{film.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + film.imageurl + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{film.name}}</h2>
+    <p>{{film.dis}}</p>
+  </div>
+</ion-content>

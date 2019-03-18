@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+
+  <ion-card *ngFor="let home of homeList;let i = index;" >
+
+    <div>
+      <img [src]="home.imageurl" />
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{home.name}}
+      </ion-card-title>
+      <p>
+        {{home.dis}}
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+           Likes
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='text'></ion-icon>
+           Comments
+        </button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <ion-note>
+          {{home.releseDate}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  
+
+  </ion-card>
+
+</ion-content>
